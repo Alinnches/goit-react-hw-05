@@ -1,0 +1,7 @@
+.movieList {
+  list-style: none;
+}
+
+.movieListItem {
+  padding-bottom: 3px;
+}

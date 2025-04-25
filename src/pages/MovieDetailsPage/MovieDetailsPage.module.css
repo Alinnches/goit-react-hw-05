@@ -1,0 +1,40 @@
+.btn {
+  border: none;
+  background-color: rgb(51, 125, 228);
+  color: beige;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.movieContainer {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.movieImg {
+  width: 275px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.movieInfo {
+  max-width: 600px;
+}
+
+.movieTitle {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.movieRate,
+.movieOvrw,
+.descr,
+.movieGenre,
+.genres {
+  margin-bottom: 10px;
+}
