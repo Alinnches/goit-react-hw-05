@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import {
   Link,
   Outlet,
@@ -15,6 +15,7 @@ const MovieDetailsPage = () => {
   const [movie, setMovie] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
+  const backlLinkRef = useRef(location.state?.from || "/");
 
   useEffect(() => {
     fetchMovieDetails(movieId).then(setMovie);
@@ -24,11 +25,9 @@ const MovieDetailsPage = () => {
 
   const { title, overview, genres, poster_path, vote_average } = movie;
 
-  const backLink = location.state?.from || "/";
-
   return (
     <div>
-      <button className={s.btn} onClick={() => navigate(backLink)}>
+      <button className={s.btn} onClick={() => navigate(backlLinkRef.current)}>
         Go back
       </button>
       <div className={s.movieContainer}>

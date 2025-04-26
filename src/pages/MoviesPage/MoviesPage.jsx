@@ -32,6 +32,8 @@ const MoviesPage = () => {
     const value = e.target.elements.query.value.trim();
     if (value) {
       setSearchParams({ query: value });
+    } else {
+      setSearchParams({});
     }
   };
 
